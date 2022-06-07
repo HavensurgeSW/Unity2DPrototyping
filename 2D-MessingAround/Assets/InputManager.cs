@@ -15,15 +15,19 @@ public class InputManager : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.Escape))
-            if (pauseStatus)
-            {
-                pauseCanvas.SetActive(false);
-                pauseStatus = false;
-            }
-            else
-            {
-                pauseCanvas.SetActive(true);
-                pauseStatus = true;
-            }
+            GamePause();
+    }
+
+    public void GamePause() {
+        if (pauseStatus)
+        {
+            pauseCanvas.SetActive(false);
+            pauseStatus = false;
+        }
+        else
+        {
+            pauseCanvas.SetActive(true);
+            pauseStatus = true;
+        }
     }
 }
