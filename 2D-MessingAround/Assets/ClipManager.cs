@@ -6,6 +6,7 @@ public class ClipManager : MonoBehaviour
 {
     static int totalClips;
     public static ClipManager Instance{get; private set;}
+    
     private void Awake() { 
     if (Instance != null && Instance != this){ 
         Destroy(this); 
@@ -27,9 +28,9 @@ public class ClipManager : MonoBehaviour
 
     public void AddClip(){
         totalClips++;
+        
     }
     public static int ReturnTotalClips(){
-        Debug.Log("test");
         return totalClips;
     }
 }
